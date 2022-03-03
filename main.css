@@ -1,0 +1,129 @@
+.body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+    position: fixed;
+    top: 26px;
+    right: 32px;
+}
+
+.notify {
+    display: flex;
+    max-width: 480px;
+    min-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0.3);
+    align-items: center;
+    border-left: 4px solid;
+    border-radius: 2px;
+    user-select: none;
+    transition: all linear .3s;
+}
+
+@keyframes silde {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fowardMS {
+    to {
+        opacity: 0;
+    }
+}
+
+.notify+.notify {
+    margin-top: 12px;
+}
+
+.notify message {
+    flex-grow: 1;
+}
+
+.notify__icon {
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+.notify__body {
+    width: 100%;
+    line-height: 6px;
+    flex-grow: 1;
+    padding: 0 6px;
+}
+
+.notify__title {
+    color: #525252;
+    font-size: 16px;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.notify__body p {
+    color: #a5a5a5;
+    font-size: 12px;
+}
+
+.notify__close {
+    padding: 0 14px;
+    cursor: pointer;
+    color: #b2b2b2;
+}
+
+.notify--success {
+    border-color: #47d864;
+}
+
+.notify--success .notify__icon {
+    color: #47d864;
+}
+
+.notify--info {
+    border-color: hsl(228deg 83% 69%);
+}
+
+.notify--info .notify__icon {
+    color: hsl(228deg 83% 69%);
+}
+
+.btn-notify {
+    margin: 38% 30%;
+    width: 100%;
+}
+
+.notify--warning {
+    border-color: #f9a030;
+}
+
+.notify--warning .notify__icon {
+    color: #f9a030;
+}
+
+.notify--error {
+    border-color: #8d8d00;
+}
+
+.notify--error .notify__icon {
+    color: #8d8d00;
+}
+
+.btn-click {
+    width: 120px;
+    background-color: #47d864;
+    height: 28px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button {
+    color: #fff;
+    margin: 0 6px;
+}
